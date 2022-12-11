@@ -20,11 +20,7 @@ static void glfw_error_callback(int error, const char *description)
 
 int main ()
 {
-    // Checking myproject my_mul is available
-    std::cout << "myproject::my_mul(3, 2) = " << myproject::my_mul(3, 2) << std::endl;
-    std::cout << "everything ok, quitting\n";
-
-// Setup window
+    // Setup window
 	glfwSetErrorCallback(glfw_error_callback);
 	if (!glfwInit())
 		return 1;
@@ -47,7 +43,7 @@ int main ()
 #endif
 
 	// Create window with graphics context
-	GLFWwindow *window = glfwCreateWindow(1280, 720, "Dear ImGui - Conan", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(1280, 720, "Myproject Tool2 - Dear ImGui", NULL, NULL);
 	if (window == NULL)
 		return 1;
 	glfwMakeContextCurrent(window);
@@ -98,23 +94,6 @@ int main ()
 
         ImGui::Text("a * b = %d", myproject::my_mul(a, b));
         ImGui::End();
-		// static float rotation = 0.0;
-		// ImGui::SliderFloat("rotation", &rotation, 0, 2 * PI);
-		// static float translation[] = {0.0, 0.0};
-		// ImGui::SliderFloat2("position", translation, -1.0, 1.0);
-        // static float color[4] = { 1.0f,1.0f,1.0f,1.0f };
-        // // pass the parameters to the shader
-        // triangle_shader.setUniform("rotation", rotation);
-        // triangle_shader.setUniform("translation", translation[0], translation[1]);
-        // // color picker
-        // ImGui::ColorEdit3("color", color);
-        // // multiply triangle's color with this color
-        // triangle_shader.setUniform("color", color[0], color[1], color[2]);
-        // ImGui::End();
-
-        // ImGui::Begin("Conan logo");
-        // render_conan_logo();
-        // ImGui::End();
 
 		// Render dear imgui into screen
 		ImGui::Render();
