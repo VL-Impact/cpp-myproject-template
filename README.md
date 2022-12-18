@@ -6,7 +6,7 @@ This template uses self-contained CMakeLists file with Conan-managed dependencie
 
 Pre-requisites:
  - CMake 3.10 or higher
- - Conan 1.33.0 or higher is installed and in the path (on my machine I may need to run `eval "$(pyenv init -)"` first)
+ - Conan 1.55.0 or higher is installed and in the path (on my machine I may need to run `eval "$(pyenv init -)"` first)
 
 If you have it, go run:
 
